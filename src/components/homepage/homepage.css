@@ -1,0 +1,264 @@
+.homepage{
+    width: 80%;
+    margin: auto;
+}
+
+.homepage-profile{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;   
+}
+
+
+.profile{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction:column ;
+    margin-top: 2rem 3rem;
+    gap: 20px;
+    padding: 2rem;
+    border-radius: .4rem;
+    background-color: rgb(243, 251, 255);
+}
+
+.profile-left{
+    display: flex;
+    gap: 20px;
+    color: rgb(54, 54, 54);
+}
+.profile-left img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid rgb(90, 89, 89);
+}
+.profile-left .user{
+    margin: 1rem 0;
+}
+.profile-left .user .name{
+    font-size: 1.4rem;
+    color: rgb(39, 39, 39);
+
+}
+.profile-right{
+    margin: 0 0.8rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.profile-right button{
+    padding: .4rem .5rem;
+    font-size: 0.9rem;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(26, 128, 6);
+    color: white;
+    transition: .3s ease all;
+}
+
+.profile-right .profile-followers:hover{
+    background-color: rgb(14, 80, 1);
+}
+
+.profile-right .profile-edit{
+    padding: 0 1rem;
+    background-color: rgb(7, 76, 139);
+}
+
+.profile-right .profile-edit:hover{
+    background-color: rgb(2, 42, 80);
+
+}
+
+.profile-right .profile-delete{
+    background-color: rgb(187, 36, 9);
+    color: #fff;
+}
+
+.profile-right .profile-delete:hover{
+    background-color: rgb(134, 27, 8);
+}
+
+.homepage-search input{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: rgb(241, 243, 252);
+    height: 3rem;
+    width: 20rem;
+    border-radius: .4rem;
+    padding: .2rem .6rem;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.allAccounts-div{
+    margin: 2rem 0;
+}
+.allAccounts,.following-account-div{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    margin-top: 1rem;
+}
+.allAccounts::-webkit-scrollbar,.following-account-div::-webkit-scrollbar{
+    display: none;
+}
+.account,.following-account{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    background-color: rgb(241, 243, 243);
+    border-radius: 30px;
+    padding: 1rem;
+    min-width: 150px;
+    height: 14rem;
+}
+.account img,.following-account img{
+    width: 5rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    height: 5rem;
+}
+.account .fullname,.following-account .fullname{
+    margin-top: 1rem;
+}
+.account .fullname,.account .username,.following-account .fullname,.following-account .username{
+    font-size: 0.9rem;
+    color: rgb(36, 35, 35);
+}
+.follow-btn{
+    padding: .4rem .5rem;
+    font-size: 0.8rem;
+    border-radius: .2rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(7, 76, 139);
+    color: white;
+    transition: .3s ease all;
+    margin: .5rem 0;
+}
+.following{
+    background-color: rgb(245, 249, 252);
+    color: black;
+    border: 1px solid black;
+}
+
+.my-following-p{
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .homepage-profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1rem; 
+        align-items: center;   
+    }
+    .homepage-search{
+        margin-top: 1rem;
+    }
+    .homepage-search input{
+        min-width: 25rem;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .homepage{
+        width: 90%;
+        margin: auto;
+    }
+    .profile-left img{
+        width: 6rem;
+        height: 6rem;
+    }
+    .profile-left .user{
+        margin: 0;
+    }
+    .profile-left .user .name{
+        font-size: 1.2rem;    
+    }
+    
+    .profile-right button{
+        padding: .3rem .4rem;
+        font-size: 0.8rem;
+    }  
+    .account,.following-account{
+        max-width: 150px;
+        max-height: 14rem;
+    }
+    .account img,.following-account img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .follow-btn{
+        padding: .3rem .5rem;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 466px) {
+    .homepage{
+        width: 95%;
+    }
+    .profile{
+        width: 100%;
+    }
+    .profile-left img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .profile-left .user .name{
+        font-size: 1.1rem;    
+    }
+    .profile-right{
+        margin: 0;
+        display: flex;
+        gap: 1rem;
+    }
+    .profile-right button{
+        padding: .3rem .4rem;
+        font-size: 0.7rem;
+    } 
+    .homepage-search{
+        min-width: 100%;
+    }
+    .homepage-search input{
+        height: 3rem;
+        min-width: 10rem;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+
+    } 
+    .account,.following-account{
+        max-width: 150px;
+        max-height: 14rem;
+    }
+    .account img,.following-account img{
+        width: 4rem;
+        height: 4rem;
+    }
+    .follow-btn{
+        padding: .3rem .5rem;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 347px) {
+    .profile-right{
+        gap: 0.5rem;
+    }
+    .profile-right button{
+        padding: .3rem .4rem;
+        font-size: 0.6rem;
+    } 
+}
